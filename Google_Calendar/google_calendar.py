@@ -54,8 +54,8 @@ def main(request_input):
         next_day = datetime.datetime.fromordinal(day+1).strftime("%Y-%m-%d")
         if day == thisday_ordinal + 7:
             new_event = {"start": {"date": this_day}, "end": {"date": next_day},
-                         "description": "\n\nhttps://openwhisk.ng.bluemix.net/api/v1/web/kellrman%40" +
-                         "us.ibm.com_dev/utils/google-calendar?thisday=" + str(day),
+                         "description": "\n\nhttps://us-east.functions.appdomain.cloud/api/v1/web/" +
+                                        "634e7a7f-9928-4744-8190-f4bf5d671142/utils/google-calendar?thisday=" + str(day),
                          "notes": day}
         else:
             new_event = {"start": {"date": this_day}, "end": {"date": next_day},
